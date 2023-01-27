@@ -1,7 +1,7 @@
 import socket
 import re
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('<ip.addr>', <port>))
+s.connect(('0.0.0.0', 0000))
 while True:
     receivedata = s.recv(1024).decode('utf-8')
     print("[+]receivedata=",receivedata)

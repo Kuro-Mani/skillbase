@@ -1,6 +1,7 @@
 from Crypto.Util.number import *
-
-c = int(input('c: '))
+with open('flag.enc', 'rb') as f:
+    c = bytes_to_long(f.read())　# file read 
+# c = int(input('c: '))　# int read
 e = int(input('e: '))
 p = int(input('p: '))
 q = int(input('q: '))

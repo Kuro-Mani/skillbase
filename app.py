@@ -40,7 +40,7 @@ class CSVToolGUI:
         try:
             with open(self.csv_file, 'r', encoding='utf-8') as file:
                 reader = csv.reader(file)
-                next(reader)  # ヘッダー行を読み飛ばす
+                next(reader) 
                 self.remaining_items = list(reader)
         except FileNotFoundError:
             messagebox.showerror("Error", "CSV file not found.")
@@ -65,7 +65,7 @@ class CSVToolGUI:
         self.display_next_item()
 
 if __name__ == "__main__":
-    csv_file = "data.csv"  # 適切なCSVファイルのパスを指定してください
+    csv_file = "data.csv"
     root = tk.Tk()
     app = CSVToolGUI(root, csv_file)
     root.mainloop()
